@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('postcode');
             $table->string('city');
             $table->string('country');
+            $table->string('phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
