@@ -3,9 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Gear;
-use App\Models\Site;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Site;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Reservation>
@@ -20,9 +20,9 @@ class ReservationFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::inRandomOrder()->value('id'),   // haalt random bestaande user
-            'site_id' => Site::inRandomOrder()->value('id'),   // idem voor site
-            'gear_id' => Gear::inRandomOrder()->value('id'),   // idem voor gear
+            'user_id' => User::inRandomOrder()->value('id'), 
+            'site_id' => Site::inRandomOrder()->value('id'),
+            'gear_id' => Gear::inRandomOrder()->value('id'), 
             'booking_date' => fake()->date(),
             'start_date' => fake()->dateTimeBetween('+1 day', '+2 weeks'),
             'player_amount' => fake()->numberBetween(8, 20),
