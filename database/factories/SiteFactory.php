@@ -2,7 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Company;
+use App\Models\Location;
+use App\Models\SiteImage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +19,9 @@ class SiteFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_id' => Company::inRandomOrder()->value('id'),
+            'site_image_id' => SiteImage::inRandomOrder()->value('id'),
             'name' => fake()->words(2, true).'airsoft',
-            'location' => fake()->city(),
+            'location' => Location::inRandomOrder()->value('id'),
             'address' => fake()->address(),
             'postcode' => fake()->postcode(),
         ];

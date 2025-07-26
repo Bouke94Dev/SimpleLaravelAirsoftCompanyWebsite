@@ -25,4 +25,14 @@ class Reservation extends Model
     {
         return $this->belongsTo(Gear::class);
     }
+
+    protected $fillable = [
+        'user_id',
+        'site_id',
+        'booking_date',
+        'start_date',
+        'player_amount',
+        'gear_id',
+        'note',
+    ];
 }

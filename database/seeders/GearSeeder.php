@@ -13,15 +13,28 @@ class GearSeeder extends Seeder
     public function run(): void
     {
 
-        $gear = [
+        $gears = [
             'Airsoft basic',
             'Airsoft basic with unlimited ammo',
             'Airsoft elite',
             'Airsoft elite with unlimited ammo',
         ];
 
-        foreach ($gear as $item) {
-            Gear::create(['name' => $item]);
+        foreach ($gears as $gear) {
+            Gear::create(['gear' => $gear]);
         }
+
+        $locations = [
+            'Amsterdam' => [
+                'long' => 'xxx',
+                'lat' => 'xxx',
+            ]
+        ];
+
+        foreach ($gears as $gear) {
+            Gear::create(['gear' => $gear]);
+        }
+
+
     }
 }

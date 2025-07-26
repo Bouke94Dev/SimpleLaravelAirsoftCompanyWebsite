@@ -13,8 +13,16 @@ class Site extends Model
 
     public $timestamps = false;
 
-    public function company(): BelongsTo
+    public function siteImage(): BelongsTo
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(SiteImage::class);
     }
+
+    protected $fillable = [
+        'site_image_id',
+        'name',
+        'location',
+        'address',
+        'postcode',
+    ];
 }
