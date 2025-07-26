@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Gear extends Model
+class Location extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['gear'];
+    protected $fillable = ['name', 'latitude', 'longitude'];
 }

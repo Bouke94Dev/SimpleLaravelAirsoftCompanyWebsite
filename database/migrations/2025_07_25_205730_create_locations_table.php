@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sites', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('site_image_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('location');
-            $table->string('address');
-            $table->string('postcode');
+            $table->decimal('latitude', 10, 7);
+            $table->decimal('longitude', 10, 7);
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sites');
+        Schema::dropIfExists('locations');
     }
 };
