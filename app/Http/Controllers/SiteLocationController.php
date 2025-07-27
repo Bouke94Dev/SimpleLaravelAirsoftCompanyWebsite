@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\SiteLocation;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class SiteLocationController extends Controller
 {
-
     public function index(): JsonResponse
     {
         $locations = SiteLocation::all();
+
         return response()->json($locations);
     }
 
@@ -29,7 +28,7 @@ class SiteLocationController extends Controller
                 'properties' => [
                     'name' => $location->name,
                 ],
-            ]]
+            ]],
         ];
 
         return response()->json($geojson);
