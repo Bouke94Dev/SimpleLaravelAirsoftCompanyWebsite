@@ -12,11 +12,12 @@
         <!-- Desktop -->
 
         <div class="hidden lg:flex items-center space-x-4">
+            <a href="{{ route('homepage') }}" class="text-gray-800 hover:text-black1">Home </a>
             @auth
                 <a href="{{ route("profile.show", Auth::id()) }}" class="text-gray-800 hover:text-black">Profile</a>
                 <form method="POST" action="{{ route("logout") }}">
                     @csrf
-                    <button type="submit" class="cursor-pointer">Logout</button>
+                    <button type="submit" class="cursor-pointer bg-gray-800 text-white px-4 py-2 rounded hover:bg-black">Logout</button>
                 </form>
             @else
                 <a href="{{ route("login") }}" class="text-gray-800 hover:text-black">Login</a>
@@ -50,11 +51,12 @@
     </div>
     <div x-show="open" x-transition class="lg:hidden px-4 pb-4 border-gray-400">
         <nav class="flex flex-col space-y-2 text-gray-800">
+                <a href="{{ route("homepage") }}" class="mt-2 hover:text-black">Home</a>
             @auth
-                <a href="{{ route("profile.show", Auth::id()) }}" class="mt-2 hover:text-black">Profile</a>
+                <a href="{{ route("profile.show", Auth::id()) }}" class="hover:text-black">Profile</a>
                 <form method="POST" action="{{ route("logout") }}">
                     @csrf
-                    <button type="submit" class="cursor-pointer">Logout</button>
+                    <button type="submit" class="cursor-pointer hover:text-black">Logout</button>
                 </form>
             @else
                 <a href="{{ route("login") }}" class="mt-2 hover:text-black">Login</a>
