@@ -15,7 +15,7 @@ An Airsoft example website I built using Laravel (PHP) as a demo project for lea
 | `GET`  | `/sites/locations`      | Get all available locations      |
 | `GET`  | `/sites/locations/{id}` | Get location details             |
 
-### Rss feed
+### RSS feed
 
 | Method | Endpoint      | Description                         |
 | ------ | ------------- | ----------------------------------- |
