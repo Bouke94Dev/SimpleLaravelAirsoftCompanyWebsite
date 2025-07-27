@@ -1,6 +1,6 @@
 import './bootstrap';
-import Alpine from 'alpinejs'
+import * as L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import './map'; // leaflet geo map
+import './alpine';
 
-window.Alpine = Alpine
-
-Alpine.start()

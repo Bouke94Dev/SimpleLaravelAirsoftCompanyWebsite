@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Location;
 use App\Models\SiteImage;
+use App\Models\SiteLocation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,8 +20,9 @@ class SiteFactory extends Factory
     {
         return [
             'site_image_id' => SiteImage::inRandomOrder()->value('id'),
-            'name' => fake()->words(2, true).'airsoft',
-            'location' => Location::inRandomOrder()->value('id'),
+            'name' => fake()->words(2, true).' airsoft',
+            'description' => 'A passionate airsoft club dedicated to providing a safe, friendly, and thrilling environment for players of all skill levels to engage in realistic tactical battles and build lasting friendships.',
+            'site_location_id' => SiteLocation::inRandomOrder()->value('id'),
             'address' => fake()->address(),
             'postcode' => fake()->postcode(),
         ];

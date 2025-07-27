@@ -13,9 +13,9 @@ class SiteImageSeeder extends Seeder
     public function run(): void
     {
         $images = [
-            'images/site_one.svg',
-            'images/site_two.svg',
-            'images/site_three.svg',
+            'images/site_one.jpg',
+            'images/site_two.jpg',
+            'images/site_three.jpg',
         ];
 
         foreach ($images as $image) {

@@ -20,6 +20,8 @@
         "vite": "^7.0.4"
     },
     "dependencies": {
-        "alpinejs": "^3.14.9"
+        "alpinejs": "^3.14.9",
+        "leaflet": "^1.9.4",
+        "ziggy-js": "^2.5.3"
     }
 }

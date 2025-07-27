@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('site_image_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('location');
+            $table->text('description');
+            $table->foreignId('site_location_id')->constrained()->onDelete('cascade');
             $table->string('address');
             $table->string('postcode');
         });

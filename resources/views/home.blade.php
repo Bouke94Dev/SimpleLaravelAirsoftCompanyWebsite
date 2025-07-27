@@ -2,7 +2,7 @@
 
 @section("title", "Home")
 
-@section("content")
+@section("body")
     <section class="min-h-screen py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Title -->
@@ -35,7 +35,7 @@
                             locations and find out how you can enjoy airsoft exactly the way you want
                         </p>
                         <a
-                            href="#"
+                            href="{{ route("sites.index") }}"
                             class="inline-block px-6 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-800 hover:text-white transition mt-auto w-max"
                         >
                             View locations

@@ -1,8 +1,11 @@
-<header x-data="{ open: false }" class="bg-gray-200 rounded-md rounded-br-none rounded-bl-none border-b-1  border-gray-400 shadow pb-4">
+<header
+    x-data="{ open: false }"
+    class="bg-gray-200 rounded-md rounded-br-none rounded-bl-none border-b-1 border-gray-400 shadow pb-4"
+>
     <div class="max-w-7xl mx-auto flex">
         <!-- Logo -->
-        <a href="{{ route('homepage')}}" class="flex items-center space-x-1">
-            <span class="text-lg font-semibold text-gray-800">{{ __('messages.title') }}</span>
+        <a href="{{ route("homepage") }}" class="flex items-center space-x-1">
+            <span class="text-lg font-semibold text-gray-800">{{ __("messages.title") }}</span>
         </a>
         <div class="flex-grow hidden lg:block"></div>
 
