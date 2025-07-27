@@ -20,9 +20,10 @@
             </div>
 
             @foreach ($sites as $site)
-                <a href='{{ route('sites.show', $site->id) }}'
+                <a
+                    href="{{ route("sites.show", $site->id) }}"
                     class="cursor-pointer flex items-center justify-between bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition mt-4 mb-4 p-4"
-                    >
+                >
                     <!-- Afbeelding + tekst "hi" in één flex-item -->
                     <div class="flex items-center">
                         <div class="flex flex-col bg-white shadow-md rounded-lg overflow-hidden p-4">
