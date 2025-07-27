@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             GearSeeder::class,
             SiteImageSeeder::class,
-            LocationSeeder::class,
+            SiteLocationSeeder::class,
             SiteSeeder::class,
             ReservationSeeder::class,
         ]);

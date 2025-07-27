@@ -23,18 +23,5 @@ class GearSeeder extends Seeder
         foreach ($gears as $gear) {
             Gear::create(['gear' => $gear]);
         }
-
-        $locations = [
-            'Amsterdam' => [
-                'long' => 'xxx',
-                'lat' => 'xxx',
-            ]
-        ];
-
-        foreach ($gears as $gear) {
-            Gear::create(['gear' => $gear]);
-        }
-
-
     }
 }
