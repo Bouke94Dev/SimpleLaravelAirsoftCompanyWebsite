@@ -14,7 +14,7 @@ Route::get('/', function () {
 Route::get('/sites/locations', [SiteLocationController::class, 'index']);
 Route::get('/sites/locations/{id}', [SiteLocationController::class, 'show'])->name('sites.locations.show');
 
-Route::get('/sites/feed', [SiteController::class, 'feed']);
+Route::get('/sites/feed', [SiteController::class, 'feed'])->name('sites.feed');
 
 Route::get('/sites', [SiteController::class, 'index'])->name('sites.index');
 Route::get('/sites/{id}', [SiteController::class, 'show'])->name('sites.show');
