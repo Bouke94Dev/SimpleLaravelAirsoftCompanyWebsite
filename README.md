@@ -1,7 +1,6 @@
 # Simple Laravel Airsoft Website
 
-![Mijn afbeelding](public/images/cover.jpg)
-<img src="(public/images/cover.jpg" alt="Mijn afbeelding" width="150" />
+![cover](public/images/cover.jpg)
 
 ## Description
 
