@@ -7,6 +7,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Title -->
             <div class="text-center mb-12">
+                @if (session("success"))
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                        {{ session("success") }}
+                    </div>
+                @endif
+
                 <h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl">
                     Experience the Thrill of Airsoft Like Never Before!
                 </h2>
@@ -55,7 +61,7 @@
                             a click away. Discover the full list and start planning your next game!
                         </p>
                         <a
-                            href="#"
+                            href="{{ route("reservation.create") }}"
                             class="inline-block px-6 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-800 hover:text-white transition mt-auto w-max"
                         >
                             Book reservation

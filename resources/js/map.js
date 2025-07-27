@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(map);
 
         // use ziggy for the routing because I do not want harcoded urls
-        const url = route('sites.api.location', { id: locationId });
+        const url = route('sites.locations.show', { id: locationId });
 
         fetch(url)
             .then(response => response.json())
