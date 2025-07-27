@@ -32,6 +32,6 @@ class UserController extends Controller
 
         $user->update($userDto->toArray());
 
-        return redirect()->back()->with('success', 'profile has been updated succesfully');
+        return redirect()->back()->with('success', 'Profile has been updated succesfully');
     }
 }

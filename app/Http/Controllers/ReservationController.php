@@ -26,7 +26,7 @@ class ReservationController extends Controller
             'site_id' => 'required|exists:sites,id',
             'gear_id' => 'required|exists:gears,id',
             'start_date' => 'required|date',
-            'player_amount' => 'required|integer|min:1',
+            'player_amount' => 'required|integer|min:6',
             'note' => 'nullable|string',
         ]);
 
