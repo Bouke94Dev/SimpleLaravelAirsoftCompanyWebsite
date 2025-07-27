@@ -10,9 +10,20 @@
         <div class="flex-grow hidden lg:block"></div>
 
         <!-- Desktop -->
+
         <div class="hidden lg:flex items-center space-x-4">
-            <a href="#" class="text-gray-800 hover:text-black">Login</a>
-            <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-black">Register</a>
+            @auth
+                <a href="{{ route("profile.show", Auth::id()) }}" class="text-gray-800 hover:text-black">Profile</a>
+                <form method="POST" action="{{ route("logout") }}">
+                    @csrf
+                    <button type="submit" class="cursor-pointer">Logout</button>
+                </form>
+            @else
+                <a href="{{ route("login") }}" class="text-gray-800 hover:text-black">Login</a>
+                <a href="{{ route("register") }}" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-black">
+                    Register
+                </a>
+            @endauth
         </div>
 
         <!-- Mobile -->
@@ -39,8 +50,16 @@
     </div>
     <div x-show="open" x-transition class="lg:hidden px-4 pb-4 border-gray-400">
         <nav class="flex flex-col space-y-2 text-gray-800">
-            <a href="#" class="mt-2 hover:text-black">Login</a>
-            <a href="#" class="mt-2 hover:text-black">Register</a>
+            @auth
+                <a href="{{ route("profile.show", Auth::id()) }}" class="mt-2 hover:text-black">Profile</a>
+                <form method="POST" action="{{ route("logout") }}">
+                    @csrf
+                    <button type="submit" class="cursor-pointer">Logout</button>
+                </form>
+            @else
+                <a href="{{ route("login") }}" class="mt-2 hover:text-black">Login</a>
+                <a href="{{ route("register") }}" class="mt-2 hover:text-black">Register</a>
+            @endauth
         </nav>
     </div>
 </header>
