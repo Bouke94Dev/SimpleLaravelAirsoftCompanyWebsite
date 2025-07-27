@@ -1,5 +1,8 @@
 # Simple Laravel Airsoft Website
 
+![Mijn afbeelding](public/images/cover.jpg)
+<img src="(public/images/cover.jpg" alt="Mijn afbeelding" width="150" />
+
 ## Description
 
 An Airsoft example website I built using Laravel (PHP) as a demo project for learning and showcasing Laravel features.
