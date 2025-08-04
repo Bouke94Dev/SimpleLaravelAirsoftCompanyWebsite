@@ -63,6 +63,8 @@ class AuthController extends Controller
 
         $this->authService->loginWithoutAttempt($user);
 
+        $request->session()->regenerate();
+
         return redirect(route('homepage'))->with('success', 'Your account was created succesfully!');
     }
 
