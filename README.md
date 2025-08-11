@@ -45,3 +45,4 @@ For the images I make use of pexels.com. Credit for the free to use images are n
 * Images have not been optimized, so file sizes may be relatively large.
 * Location data is for demonstration purposes only and does not accurately match the provided postal codes.
 * Some tests are missing, I might add them later perhaps.
+* You can create infinite reservations it is just for demo purposes
